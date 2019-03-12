@@ -1,6 +1,5 @@
 # leetcode_edward-Shi
 To prepare for the technical interview
 
-Tags
-
+#### Tags
 https://cspiration.com/leetcodeClassification#103
