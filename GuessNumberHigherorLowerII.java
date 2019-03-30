@@ -60,7 +60,7 @@ public class GuessNumberHigherorLowerII {
     }
 
     private int helper(int i, int j) {
-        if (i > j) return 0;
+        if (i >= j) return 0;
         if (dp[i][j] != 0) return dp[i][j];
         int res = Integer.MAX_VALUE;
         for (int x = i; x <= j; x++) {
