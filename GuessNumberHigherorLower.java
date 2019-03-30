@@ -49,7 +49,7 @@ public class GuessNumberHigherorLower {
 
 
     // 防止编译器报错函数
-    public int guess(int num) {
-        return 0;
-    }
+   // public int guess(int num) {
+   //     return 0;
+   // }
 }
