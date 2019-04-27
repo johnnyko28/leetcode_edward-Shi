@@ -16,19 +16,21 @@ public class CloneGraph {
      * space : O(m)
      */
 
-    HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
+    HashMap<Node, Node> map = new HashMap<>();
 
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+    public Node cloneGraph(Node node) {
         return helper(node);
     }
-    public UndirectedGraphNode helper(UndirectedGraphNode node) {
+    public Node helper(Node node) {
         if (node == null) return null;
         if (map.containsKey(node)) return map.get(node);
-        UndirectedGraphNode dup = new UndirectedGraphNode(node.label);
+        List<Node> list = new ArrayList<>();
+
+        Node dup = new Node(node.val, list);
         map.put(node, dup);
-        for (UndirectedGraphNode neighboer : node.neighbors) {
-            UndirectedGraphNode clone = helper(neighboer);
-            dup.neighbors.add(clone);
+        for (Node neighbor : node.neighbors) {
+            Node clone = helper(neighbor);
+            list.add(clone);
         }
         return dup;
     }
