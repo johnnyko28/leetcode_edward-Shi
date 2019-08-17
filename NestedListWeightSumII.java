@@ -53,7 +53,7 @@ public class NestedListWeightSumII {
                 nextList.addAll(nest.getList());
             }
         }
-        res += nextList.isEmpty() ? 0 : helper(nestedList, res);
+        res += nextList.isEmpty() ? 0 : helper(nextList, res);
         return res;
     }
 
